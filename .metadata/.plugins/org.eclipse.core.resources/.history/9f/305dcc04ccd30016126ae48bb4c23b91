@@ -1,0 +1,6 @@
+
+public class School extends Building {
+	
+	String Curr_Occ[];
+
+}

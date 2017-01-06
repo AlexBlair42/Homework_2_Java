@@ -1,0 +1,6 @@
+
+public class CityHall extends Building {
+	
+	String Curr_Occ[];
+
+}

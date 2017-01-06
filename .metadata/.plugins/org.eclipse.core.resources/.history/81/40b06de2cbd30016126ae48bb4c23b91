@@ -1,0 +1,6 @@
+
+public class Kid extends Person
+{
+	public String candy;
+	// All kids have a favorite candy
+}

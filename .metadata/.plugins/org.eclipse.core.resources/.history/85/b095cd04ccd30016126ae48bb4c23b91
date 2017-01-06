@@ -1,0 +1,6 @@
+
+public class Police extends Person {
+	
+	enum Role{Patrol, Sargent, Captain, Chief}
+
+}
