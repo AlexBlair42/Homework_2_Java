@@ -7,11 +7,14 @@ public abstract class Building {
 	 * Also the appropriate get and set functions are included
 	 */
 	
-	
 	private String Name;
 	private String Address;
 	
-	
+	/**
+	 * Below are the get and set functions.
+	 * @return Name
+	 * @return Address
+	 */
 	
 	public String getName(){return Name;}
 	public void setName(String Name){this.Name = Name;}
@@ -19,4 +22,16 @@ public abstract class Building {
 	public String getAddress(){return Address;}
 	public void setAddress(String Address){this.Address = Address;}
 
+
+	/**
+	 * This is a constructor for buildings
+	 * @param n
+	 * @param a
+	 * n = Name
+	 * a = Address
+	 */
+	public Building(){}
 }
+
+
+////// This class is completed

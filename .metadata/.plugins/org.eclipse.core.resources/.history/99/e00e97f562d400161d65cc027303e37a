@@ -1,0 +1,22 @@
+
+public class Police extends Person {
+	/**
+	 * @author Alex
+	 * Police are a type of person and they also are employees.
+	 * There are many different roles that police have.
+	 * They are listed in an enumeration
+	 */
+	// Police can have many different roles
+	enum Role{Patrol, Sargent, Captain, Chief}
+
+	public Police(String n, int a, long p)
+	{
+		n = getName();
+		a = getAge();
+		p = getPhone();
+	}
+	
+	//public String getRole(){return Role;}
+	//public void setRole(enum Role){this.Role = Role;}
+
+}

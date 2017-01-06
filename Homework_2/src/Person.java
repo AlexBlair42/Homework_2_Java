@@ -13,13 +13,14 @@ public abstract class Person {
 	private int age;
 	private long Phone_num;
 	
-	public Person()
-	{
-		String name = "Frank";
-		int age = 23;
-		long Phone_num = 3602250;
-		
-	}
+	public Person(){}
+	
+	/**
+	 * These are the get and set functions.
+	 * @return name
+	 * @return age
+	 * @return Phone_num
+	 */
 	
 	public String getName(){return name;}
 	public void setName(String name){this.name = name;}
@@ -32,3 +33,5 @@ public abstract class Person {
 	
 
 }
+
+////////////// This class should be done

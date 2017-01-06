@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+public class CityHall extends Building {
+	/**
+	 * City Hall is where all of the major functions of running the city go down. 
+	 * Police reside in city hall.
+	 * @author Alex
+	 * This also has an array of occupants.
+	 */
+	ArrayList<Person> Students;
+	
+	public void AddStudents()
+	{
+		
+	}
+	
+	public CityHall(String n, String a)
+	{
+		n = getName();
+		a = getAddress();
+	}
+	
+	// This class will display the array of current occupants
+
+}

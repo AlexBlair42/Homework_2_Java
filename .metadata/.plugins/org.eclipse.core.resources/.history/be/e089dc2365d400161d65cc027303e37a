@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+
+public class City {
+/** 
+ * @author Alex Blair
+ * @version 1.00 1/6/17
+ * This is the main function of the city model
+ * @param args
+ */
+	
+	
+	public static void main(String[] args) {
+	// This is the main function for the city
+		
+		Teacher T1 = new Teacher("Ms.Adams", 35, 2536696);
+		Police P1 = new Police("Charles", 26, 2365879);
+		Police P2 = new Police("Andrew", 22, 2521478);
+		Police P3 = new Police ("Anthony", 21, 2325987);
+		Police P4 = new Police ("Amy", 32, 9658741);
+		Kid k1 = new Kid("Timmy", 7, 0);
+		Kid k2 = new Kid("Lisa", 9, 1);
+		Kid k3 = new Kid ("Bobby", 10, 2);
+		
+		School s1 = new School("Simville Elementary", "432 Coolio Blvd");
+		
+		
+
+	}
+
+}

@@ -1,12 +1,34 @@
+import java.util.ArrayList;
 
 public class School extends Building {
 	/**
 	 * Schools are a sub class of buildings
 	 * @author Alex
 	 */
-	public String Curr_Occ[];
+	ArrayList<Kid> School = new ArrayList(); 
 	// This is an array of the current occupants
 	
-	public String[] getOcc(){return Curr_Occ;}
+	
+	/**
+	 * Tis is the school constructor
+	 * @param n
+	 * @param a
+	 */
+	public School(String n, String a) {
+		n = getName();
+		a = getAddress();
+	}
+	
+	/**
+	 * This function adds a kid to the School ArrayList
+	 */
+	public void AddKid()
+	{
+		for(int i = 0; i< School.size(); i++)
+		{
+			Kid e = new Kid();
+			School.add(e);
+		}
+	}
 
 }

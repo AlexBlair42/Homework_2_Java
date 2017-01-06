@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class CityHall extends Building {
 	/**
@@ -6,10 +7,24 @@ public class CityHall extends Building {
 	 * @author Alex
 	 * This also has an array of occupants.
 	 */
-	public String Curr_Occ[];
+	ArrayList<Police> CityHall = new ArrayList();
 	
-	public String[] getOcc(){return Curr_Occ;}
+	public CityHall(String n, String a)
+	{
+		n = getName();
+		a = getAddress();
+	}
 	
 	// This class will display the array of current occupants
+	
+	
+	public void AddPolice()
+	{
+		for (int i=0; i< CityHall.size(); i++)
+		{
+			Police p = new Police();
+			CityHall.add(p);
+		}
+	}
 
 }
