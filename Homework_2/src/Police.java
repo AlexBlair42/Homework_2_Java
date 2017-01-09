@@ -1,49 +1,39 @@
-import java.util.Scanner;
 
 public class Police extends Person implements Employee {
 	/**
-	 * @author Alex
+	 * @author Alex Blair
 	 * Police are a type of person and they also are employees.
 	 * There are many different roles that police have.
 	 * They are listed in an enumeration
 	 */
 	// Police can have many different roles
+	public enum Role{Patrol, Sargent, Captain, Chief}
+	private Role role;
+	int money = 0;
 	
-	enum Role{Patrol, Sargent, Captain, Chief}
-	Role role;
-	
-
-	public Police(Role r, String n, int a, long p)
+	/**
+	 * This is the constructor for the "Police" object. It has the following parameters.
+	 * @param n name
+	 * @param a age
+	 * @param p Phone_Num
+	 * @param r Role
+	 */
+	public Police(String n, int a, long p, Role r)
 	{
-		n = getName();
-		a = getAge();
-		p = getPhone();
-		role = r;
+		super(n,a,p);
+		role = Role.Patrol;
 	}
-
-	public Police() {}
 
 	/**
 	 * These are the functions that implement Employee
-	 * @return Money
-	 * @return ID
 	 */
-	
-	
-	public int getPaid() {
-		int money = 50000;
-		
-		return money;
+	public void getPaid(int m) 
+	{
+		money+= m;
 	}
 
-	
-	public void reqId() {
-		System.out.println("What is your Employee ID?");
-		
-		Scanner input = new Scanner(System.in);
-		int id = input.nextInt();
-		
-		System.out.printf("Your ID is %d.", input);
-		
+	public long reqID()
+	{
+		return ID;
 	}
 }

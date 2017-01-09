@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class City {
 /** 
  * @author Alex Blair
- * @version 1.00 1/6/17
+ * @version 1.00 1/8/17
  * This is the main function of the city model
  * @param args
  */
@@ -12,41 +12,68 @@ public class City {
 	
 	public static void main(String[] args) {
 	// This is the main function for the city
+		/**
+		 * This is creating a new array list of buildings.
+		 */
+		ArrayList<Building> buildings = new ArrayList();
 		
 		/**
-		 * Below are new members of the city that are created
+		 * This is creating the occupants of the School building.
 		 */
+		ArrayList<Person> schoolOcc = new ArrayList();
+		schoolOcc.add(new Teacher("Mrs. Andrews", 35, 5269632, 5, "Bachelor's"));
+		schoolOcc.add(new Kid("Bobby", 10, 2521476, "Twix"));
+		schoolOcc.add(new Kid("Sally", 11, 2523639, "Jolly Rancher"));
+		schoolOcc.add(new Kid("Butch", 12, 5259636, "Sour Patch Kids"));
 		
-		Teacher T1 = new Teacher("Ms.Adams", 35, 2536696);
-		Police P1 = new Police(Police.Role.Sargent,"Charles", 26, 2365879);
-		Police P2 = new Police(Police.Role.Patrol,"Andrew", 22, 2521478);
-		Police P3 = new Police (Police.Role.Captain,"Anthony", 21, 2325987);
-		Police P4 = new Police (Police.Role.Chief,"Amy", 32, 9658741);
-		Kid k1 = new Kid("Timmy", 7, 0);
-		Kid k2 = new Kid("Lisa", 9, 1);
-		Kid k3 = new Kid ("Bobby", 10, 2);
-		
-		School s1 = new School("Simville Elementary", "432 Coolio Blvd");
-		CityHall c1 = new CityHall("Simville City Hall", "200 AwesomeSauce Ln");
-		
-		System.out.printf("The City is Simville!\n");
-		System.out.printf("The School is %s.\n", s1);
-		System.out.printf("The City Hall is %s.\n", c1);
-	
-		System.out.printf("The teacher of the town is %s.\n", T1);
-		
-		System.out.printf("The Police of the town are %s.\n", T1);
-		System.out.printf("The Police of the town are %s.\n", T1);
-		System.out.printf("The Police of the town are %s.\n", T1);
-		System.out.printf("The Police of the town are %s.\n", T1);
-		
-		System.out.printf("Kid 1 is %s.\n", k1);
-		System.out.printf("Kid 2 is %s.\n", k2);
-		System.out.printf("Kid 3 is %s.\n", k3);
+		/**
+		 * This creates a new instance of a School.
+		 */
+		School elem = new School("Simcity Elementary", "12363 N Sim Rd", schoolOcc);
+		buildings.add(elem);
 		
 		
+		/**
+		 * This creates the new array list for City Hall, as well as the occupants.
+		 */
+		ArrayList<Person>CityHallOcc = new ArrayList();
+		CityHallOcc.add(new Police("Officer Benson", 35, 5236963, Police.Role.Patrol));
+		CityHallOcc.add(new Police("Chief O'Neil", 40, 2523685, Police.Role.Chief));
+		CityHallOcc.add(new Police("Captain Ruiz", 22, 6354719, Police.Role.Captain));
+		CityHallOcc.add(new Police("Sargent Connors", 25, 4154798, Police.Role.Sargent));
+		CityHall CH = new CityHall("Simcity City Hall", "446 NE Raspberry Ln", CityHallOcc);
+		buildings.add(CH);
 		
+		
+		/**
+		 * This will output the occupants of each building.
+		 */
+		   System.out.println("Occupancy of Simcity Elementary:");
+		    for (Person p: schoolOcc){
+		      System.out.println(p.getName());
+		    }
+		    System.out.println("Occupancy of Simcity City Hall:");
+		    for (Person p: CityHallOcc){
+		      System.out.println(p.getName());
+		    }
+		    System.out.println("Buildings in this city of Simcity:");
+		    for (Building b: buildings){
+		      System.out.println(b.getName());
+		    }
 
-	}
-
+		    /**
+		     * These loops below will pay the employees of each respective institution.
+		     */
+		    for (int t=0; t<schoolOcc.size(); t++)
+		    {
+		      if (schoolOcc.get(t) instanceof Employee)
+		        ((Teacher) schoolOcc.get(t)).getPaid(30000);
+		    }
+		    
+		    for (int k=0; k<CityHallOcc.size(); k++)
+		    {
+		      if (CityHallOcc.get(k) instanceof Employee)
+		        ((Police) CityHallOcc.get(k)).getPaid(80000);
+		      }
+		    }
 }

@@ -1,21 +1,19 @@
 
-public abstract class Building {
+public class Building {
 	// This is the base class for buildings
 	/**
 	 * This is the base class for all buildings
-	 * @author Alex Blair
 	 * Also the appropriate get and set functions are included
+	 * @author Alex Blair
 	 */
-	
-	private String Name;
-	private String Address;
+	public String Name;
+	public String Address;
 	
 	/**
 	 * Below are the get and set functions.
 	 * @return Name
 	 * @return Address
 	 */
-	
 	public String getName(){return Name;}
 	public void setName(String Name){this.Name = Name;}
 	
@@ -30,8 +28,9 @@ public abstract class Building {
 	 * n = Name
 	 * a = Address
 	 */
-	public Building(){}
+	public Building(String n, String a)
+	{
+		Name = n;
+		Address = a;
+	}
 }
-
-
-////// This class is completed

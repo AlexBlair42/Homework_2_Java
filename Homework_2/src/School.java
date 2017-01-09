@@ -3,32 +3,23 @@ import java.util.ArrayList;
 public class School extends Building {
 	/**
 	 * Schools are a sub class of buildings
-	 * @author Alex
+	 * School occupants are loaded into an array list.
+	 * @author Alex Blair
 	 */
-	ArrayList<Kid> School = new ArrayList(); 
+	ArrayList<Person> Occupancy; 
 	// This is an array of the current occupants
 	
 	
 	/**
-	 * Tis is the school constructor
+	 * This is the school constructor for the "School" object. It has the following parameters.
 	 * @param n
 	 * @param a
 	 */
-	public School(String n, String a) {
-		n = getName();
-		a = getAddress();
+	public School(String n, String a, ArrayList<Person> p) 
+	{
+		super(n,a);
+		Occupancy =p;
 	}
 	
-	/**
-	 * This function adds a kid to the School ArrayList
-	 */
-	public void AddKid()
-	{
-		for(int i = 0; i< School.size(); i++)
-		{
-			Kid e = new Kid();
-			School.add(e);
-		}
-	}
-
 }
+

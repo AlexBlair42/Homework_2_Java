@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Teacher extends Person implements Employee {
 	/**
@@ -6,55 +5,36 @@ public class Teacher extends Person implements Employee {
 	 * @see
 	 * @author Alex Blair
 	 */
-	
-	public int Grade_lvl;
-	public String Cert;
+	int Grade_lvl;
+	String Cert;
+	int money = 0;
 	
 	/**
-	 * This is the constructor for a teacher
+	 * This is the constructor for a "Teacher" object and it has the following parameters.
 	 * @param s 
 	 * @param a
 	 * @param p
 	 */
-	Teacher(String s, int a, long p)
+	public Teacher(String n, int a, long p, int g, String c)
 	{
-		s = getName();
-		a = getAge();
-		p = getPhone();
+		super(n,a,p);
+		Grade_lvl = g;
+		Cert = c;
 	}
 	
-	
-	/**
-	 * These are the get and set functions for teacher.
-	 * @return Grade_lvl
-	 * @return Certification
-	 */
-public int getGrade(){return Grade_lvl;}
-public void setGrade(int Grade_lvl){this.Grade_lvl = Grade_lvl;}
-
-public String getCert(){return Cert;}
-public void setCert(String Cert){this.Cert = Cert;}
-
-
 /**
  * These are the functions that implement Employee
  * @return Money
  * @return ID
  */
-public int getPaid() {
-	int money = 50000;
-	
-	return money;
+public void getPaid(int m) 
+{
+	money+=m;
 }
 
-
-public void reqId() {
-	System.out.println("What is your Employee ID?");
-	
-	Scanner input = new Scanner(System.in);
-	int id = input.nextInt();
-	
-	System.out.printf("Your ID is %d.", input);
-	
+public long reqID()
+{
+	return ID;
 }
+
 }

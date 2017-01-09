@@ -1,37 +1,37 @@
 
-public abstract class Person {
+public class Person {
 	/**
 	 * This is the base class for people in the city.
-	 * They all have a name, age, and phone number.
+	 * They all have a name, age, and phone number. It is the super class for Teacher, Kid, and Police.
 	 * The appropriate get and set functions are included.
-	 * 
-	 * @author Alex
+	 * @author Alex Blair
 	 * @see
 	 */
-	
-	private String name;
-	private int age;
-	private long Phone_num;
-	
-	public Person(){}
+	protected String name;
+	protected int age;
+	protected long Phone_num;
+	static long prevID = 11111;
+	protected long ID;
 	
 	/**
-	 * These are the get and set functions.
-	 * @return name
-	 * @return age
-	 * @return Phone_num
+	 * This is the constructor for a "Person" object. This is the base class for all types of people.
+	 * @param n
+	 * @param a
+	 * @param p
 	 */
+	public Person(String n, int a, long p)
+	{
+		name = n;
+		age = a;
+		Phone_num = p;
+		ID = prevID;
+		prevID++;
+	}
 	
+	/**
+	 * This is the get function for Name.
+	 * @return name
+	 */
 	public String getName(){return name;}
-	public void setName(String name){this.name = name;}
-	
-	public int getAge(){return age;}
-	public void setAge(int age){this.age = age;}
-	
-	public long getPhone(){return Phone_num;}
-	public void setPhone(){this.Phone_num = Phone_num;}
-	
-
 }
 
-////////////// This class should be done
